@@ -56,15 +56,22 @@ def update_graph(selected_region):
     if selected_region == "ALL":
         filtered = df
         title = "Sales in All Regions"
+        fig = px.line(
+        filtered,
+        x="date",
+        y="sales",
+        title=title,
+        color="region")
     else: 
         filtered = df[df["region"] == selected_region]
-        title =  f"Sales in {selected_region}"
-
-    fig = px.line(
+        title =  f"Sales in {selected_region}" 
+        fig = px.line(
         filtered,
         x="date",
         y="sales",
         title=title)
+
+    
 
     return fig
 

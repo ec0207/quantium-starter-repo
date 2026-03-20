@@ -9,11 +9,9 @@ EXIT_CODE=$?
 
 deactivate
 
-if [$EXIT_CODE -eq 1]; then
+if [$EXIT_CODE -eq 0]; then
     echo "All tests passed"
-    echo 0
+    exit 0
 else 
     echo "Tests failed"
     exit 1
-
-exit

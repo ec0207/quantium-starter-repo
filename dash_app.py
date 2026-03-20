@@ -70,9 +70,6 @@ def update_graph(selected_region):
         x="date",
         y="sales",
         title=title)
-
-    
-
     return fig
 
 
